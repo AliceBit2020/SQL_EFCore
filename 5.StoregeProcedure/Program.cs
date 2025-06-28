@@ -8,6 +8,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SQL_EFCore
 {
+    class Foo
+    {
+        public Foo() { }
+    }
     class Program
     {
         static void Main(string[] args)
