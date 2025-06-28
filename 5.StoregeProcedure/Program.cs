@@ -15,7 +15,7 @@ namespace SQL_EFCore
             using (Context db = new Context())
             {
                 Console.WriteLine("--- Stored Procedures ---");
-             
+                Console.WriteLine("Hello from br1");
 
                 //SqlParameter param1 = new SqlParameter("@name", "Sumsung");
                 //var phones = db.Phones.FromSqlRaw("GetPhonesByCompany @name", param1).ToList();
