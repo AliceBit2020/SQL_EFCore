@@ -10,6 +10,10 @@ namespace SQL_EFCore
 {
     class Program
     {
+        struct Str
+        {
+            public Str(string s) { }
+        }
         static void Main(string[] args)
         {
             using (Context db = new Context())
