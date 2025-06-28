@@ -17,25 +17,25 @@ namespace SQL_EFCore
                 Console.WriteLine("--- Stored Procedures ---");
              
 
-                SqlParameter param1 = new SqlParameter("@name", "Sumsung");
-                var phones = db.Phones.FromSqlRaw("GetPhonesByCompany @name", param1).ToList();
-                foreach (var p in phones)
-                {
-                    Console.WriteLine($"{p.Name} - {p.Price}");
-                }
+                //SqlParameter param1 = new SqlParameter("@name", "Sumsung");
+                //var phones = db.Phones.FromSqlRaw("GetPhonesByCompany @name", param1).ToList();
+                //foreach (var p in phones)
+                //{
+                //    Console.WriteLine($"{p.Name} - {p.Price}");
+                //}
 
-                Console.WriteLine("--- OUTPUT ---");
-                Console.ReadKey();
+                //Console.WriteLine("--- OUTPUT ---");
+                //Console.ReadKey();
 
-                var param2 = new SqlParameter
-                {
-                    ParameterName = "@phoneName",
-                    SqlDbType = SqlDbType.VarChar,
-                    Direction = ParameterDirection.Output,
-                    Size = 50
-                };
-                db.Database.ExecuteSqlRaw("GetPhoneWithMaxPrice @phoneName OUT", param2);
-                Console.WriteLine(param2.Value);
+                //var param2 = new SqlParameter
+                //{
+                //    ParameterName = "@phoneName",
+                //    SqlDbType = SqlDbType.VarChar,
+                //    Direction = ParameterDirection.Output,
+                //    Size = 50
+                //};
+                //db.Database.ExecuteSqlRaw("GetPhoneWithMaxPrice @phoneName OUT", param2);
+                //Console.WriteLine(param2.Value);
             }
         }
     }
