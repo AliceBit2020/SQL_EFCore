@@ -14,12 +14,16 @@ namespace SQL_EFCore
     }
     class Program
     {
+        struct Str
+        {
+            public Str(string s) { }
+        }
         static void Main(string[] args)
         {
             using (Context db = new Context())
             {
                 Console.WriteLine("--- Stored Procedures ---");
-                Console.WriteLine("Hello from br1");
+
 
                 //SqlParameter param1 = new SqlParameter("@name", "Sumsung");
                 //var phones = db.Phones.FromSqlRaw("GetPhonesByCompany @name", param1).ToList();
