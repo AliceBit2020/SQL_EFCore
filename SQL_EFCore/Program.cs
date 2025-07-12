@@ -14,7 +14,7 @@ namespace SQL_EFCore
                 Console.WriteLine("--- FromSql: #1 ---");
                 Console.ReadKey();
 
-                var companies = db.Companies.FromSqlRaw("SELECT * FROM Companies ").ToList();
+                var companies = db.Companies.FromSqlRaw("SELECT * FROM Companies  ").ToList();////*as cm JOIN  Countries as c ON cm.CountryId=c.Id*/
                 foreach (var company in companies)
                 {
                     Console.WriteLine(company.Name);

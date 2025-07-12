@@ -25,14 +25,14 @@ namespace SQL_EFCore
                 Console.WriteLine("--- Stored Procedures ---");
 
 
-                //SqlParameter param1 = new SqlParameter("@name", "Sumsung");
-                //var phones = db.Phones.FromSqlRaw("GetPhonesByCompany @name", param1).ToList();
-                //foreach (var p in phones)
-                //{
-                //    Console.WriteLine($"{p.Name} - {p.Price}");
-                //}
+                SqlParameter param1 = new SqlParameter("@name", "Sumsung");
+                var phones = db.Phones.FromSqlRaw("GetPhonesByCompany @name", param1).ToList();
+                foreach (var p in phones)
+                {
+                    Console.WriteLine($"{p.Name} - {p.Price}");
+                }
 
-                //Console.WriteLine("--- OUTPUT ---");
+                Console.WriteLine("--- OUTPUT ---");
                 //Console.ReadKey();
 
                 //var param2 = new SqlParameter

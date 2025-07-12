@@ -17,8 +17,8 @@ namespace SQL_EFCore
                 Console.WriteLine("--- SqlParameter: #1 ---");
                 Console.ReadKey();
 
-                SqlParameter param = new SqlParameter("@name", "%Galaxy%");
-                var phones1 = db.Phones.FromSqlRaw("SELECT * FROM Phones WHERE Name LIKE @name", param).ToList();
+                SqlParameter param = new SqlParameter("@name1", "%Galaxy%");
+                var phones1 = db.Phones.FromSqlRaw("SELECT * FROM Phones WHERE Name LIKE @name1", param).ToList();
                 foreach (var phone in phones1)
                 {
                     Console.WriteLine(phone.Name);
